@@ -1,10 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+const App = () => {
+    return (
+        <h1>Hola mundo!</h1>
+    )
+}
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-)
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+);
