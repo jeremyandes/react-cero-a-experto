@@ -1,19 +1,13 @@
-// import { Fragment } from 'react';
+const getResult = (a, b) => {
+    return a + b;
+}
 
 export const FirstApp = () => {
     return (
-        // <Fragment>
-        //     <h1>FirstApp title!</h1>
-        //     <h1>FirstApp title!</h1>
-        //     <h1>FirstApp title!</h1>
-        //     <h1>FirstApp title!</h1>
-        // </Fragment>
-
         <>
-            <h1>FirstApp title!</h1>
-            <h1>FirstApp title!</h1>
-            <h1>FirstApp title!</h1>
-            <h1>FirstApp title!</h1>
+            <h1>{getResult(1, 2)}</h1>
+            {/* <code>{JSON.stringify(newMessage)}</code> */}
+            <h4>Soy un subtítulo</h4>
         </>
     )
 }
