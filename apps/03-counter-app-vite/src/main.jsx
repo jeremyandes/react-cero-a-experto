@@ -8,6 +8,6 @@ import './styles.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <FirstApp title='Jeremy' subtitle='Soy un subtítulo' />
+        <FirstApp title='Jeremy' subtitle={1234567} />
     </React.StrictMode>
 );
