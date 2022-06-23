@@ -19,4 +19,5 @@ body {
 button {
     padding: 15px;
     font-size: 1.25rem;
+    margin: 0 2px;
 }
