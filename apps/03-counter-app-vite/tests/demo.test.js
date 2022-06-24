@@ -1,5 +1,12 @@
-test('should not fail', () => {
-    if (1 === 0) {
-        throw new Error('No puede ser 0');
-    }
-})
+test('Demo test', () => {
+
+    // Inicialización
+    const message1 = 'Hola Mundo';
+
+    // Estímulo
+    const message2 = message1.trim();
+
+    // Comportamiento esperado
+    expect(message1).toBe(message2);
+
+})  
