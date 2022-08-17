@@ -13,6 +13,3 @@ export const getImagen = async () => {
         return 'No se encontro la imagen';
     }
 }
-
-
-
