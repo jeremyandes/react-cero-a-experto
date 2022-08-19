@@ -5,7 +5,7 @@ export const GifExpertApp = () => {
     const [categories, setCategories] = useState(['Michael Jordan', 'Curry']);
 
     const onAddCategory = (value) => {
-        setCategories([value, ...categories]);
+        if (!categories.includes(value)) { setCategories([value, ...categories]); }
     }
 
     return (
