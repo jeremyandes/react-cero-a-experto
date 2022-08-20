@@ -10,7 +10,22 @@ describe('Testing <AddCategory />', () => {
         fireEvent.input(input, { target: { value: 'NBA' } });
         expect(input.value).toBe('NBA');
 
-        screen.debug();
+        // screen.debug();
+    })
+
+    test('should call onNewCategory if input has value', () => {
+        const inputValue = 'Denver Nuggets';
+
+        render(<AddCategory onNewCategory={() => { }} />);
+
+        const input = screen.getByRole('textbox');
+        const form = screen.getByRole('form');
+
+        fireEvent.input(input, { target: { value: inputValue } });
+        fireEvent.submit(form);
+
+        expect(input.value).toBe('');
+        // screen.debug();
     })
 
 })
