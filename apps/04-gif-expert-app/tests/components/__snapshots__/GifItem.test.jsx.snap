@@ -15,3 +15,19 @@ exports[`Pruebas en <GifItem /> should match with snapshot 1`] = `
   </div>
 </div>
 `;
+
+exports[`Testing <GifItem /> should match with snapshot 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="Michael Jordan"
+      src="https://media0.giphy.com/media/l3q2JCu9lep6dAmyY/giphy.gif?cid=4f32db46skaam7bco6t1ev32fy7dvl6l2227o7vualbk7pik&rid=giphy.gif&ct=g"
+    />
+    <p>
+      Michael Jordan
+    </p>
+  </div>
+</div>
+`;
