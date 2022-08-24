@@ -5,7 +5,6 @@ export const Message = () => {
 
     useEffect(() => {
         const onMouseMove = ({ x, y }) => {
-            // const coords = { x, y };
             console.log({ x, y });
         }
 
