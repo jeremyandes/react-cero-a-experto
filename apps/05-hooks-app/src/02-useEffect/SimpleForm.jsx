@@ -16,9 +16,20 @@ export const SimpleForm = () => {
         })
     }
 
+    // Efecto de ejecución única
     useEffect(() => {
-        console.log('useEffect called!');
-    })
+        console.log('useEffect called once!');
+    }, []);
+
+    // Efecto que está pendiente de los cambios de su dependencia
+    useEffect(() => {
+        console.log('formState changed');
+    }, [formState]);
+
+    // Efecto que está pendiente de los cambios de su dependencia
+    useEffect(() => {
+        console.log('EMAIL changed');
+    }, [email]);
 
     return (
         <>
