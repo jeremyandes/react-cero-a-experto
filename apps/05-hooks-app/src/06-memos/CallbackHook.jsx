@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import { ShowIncrement } from "./ShowIncrement";
 
 export const CallbackHook = () => {
@@ -6,13 +6,12 @@ export const CallbackHook = () => {
     // const increment = () => setCounter(counter + 1);
 
     const increment = useCallback(
-        () => {
+        (value) => {
             console.log('setCounter anterior', counter);
-            setCounter((value) => value + 1);
+            setCounter((actualValue) => actualValue + value);
         },
         [],
     )
-
 
     return (
         <div className="container">
