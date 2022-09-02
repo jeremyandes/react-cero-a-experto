@@ -1,5 +1,5 @@
-import { useCounter } from "../hooks/useCounter";
-import { useFetch } from "../hooks/useFetch"
+import { useCounter, useFetch } from "../hooks";
+import { Quote, LoadingQuote } from "./";
 
 export const MultipleCustomHooks = () => {
     const baseUrl = 'https://www.breakingbadapi.com/api';
@@ -11,22 +11,13 @@ export const MultipleCustomHooks = () => {
 
     return (
         <div className="container">
-            <h1>Breaking Bad</h1>
+            <h1>Breaking Bad Quotes</h1>
             <hr />
 
             {
-                (isLoading)
-                    ? (
-                        <div className="alert alert-info text-center w-100 mx-auto">
-                            <h5>Cargando...</h5>
-                        </div>
-                    )
-                    : (
-                        <blockquote className="blockquote text-end">
-                            <p className="mb-2">{quote}</p>
-                            <footer className="blockquote-footer">{author}</footer>
-                        </blockquote>
-                    )
+                isLoading
+                    ? <LoadingQuote />
+                    : <Quote quote={quote} author={author} />
             }
 
             <button className="btn btn-outline-dark" disabled={isLoading} onClick={() => increment()}>
