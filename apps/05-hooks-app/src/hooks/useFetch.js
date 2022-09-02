@@ -9,6 +9,12 @@ export const useFetch = (url) => {
 
     const getFetch = async () => {
 
+        setState({
+            data: null,
+            isLoading: true,
+            hasErrors: null,
+        })
+
         const response = await fetch(url);
         const data = await response.json();
 
