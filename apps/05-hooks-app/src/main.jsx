@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 import './08-useReducer/intro-reducer';
+import { TodoApp } from './08-useReducer/TodoApp';
 
 import './index.css'
 // import { HooksApp } from './HooksApp'
@@ -30,6 +31,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   //   {/* <Memorize /> */}
   //   {/* <MemoHook /> */}
   //   {/* <CallbackHook /> */}
-  // <Padre />
+  //   {/* <Padre /> */}
   // </React.StrictMode>
+
+  <TodoApp />
 )

@@ -7,13 +7,13 @@ const initialState = [
 ];
 
 const todoReducer = (state = initialState, action = {}) => {
-    if (action.type === '[TODO] add todo') {
-        return [...state, action.payload];
+    switch (action.type) {
+        case '[TODO] add todo':
+            return [...state, action.payload];
+        default:
+            return state;
     }
-
-    return state;
 }
-
 
 let todos = todoReducer();
 // todo.push({
