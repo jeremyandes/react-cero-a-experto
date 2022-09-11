@@ -18,18 +18,32 @@ const initialState = [
 
 export const TodoApp = () => {
 
-    const [state, dispatch] = useReducer(todoReducer, initialState);
+    const [todos, dispatch] = useReducer(todoReducer, initialState);
 
     return (
-        <>
-            <h1>TodoApp</h1>
+        <div className="container">
+            <h1>TodoApp: 10 <small className="mx-4">pendientes: 2</small></h1>
             <hr />
 
-            <ul>
-                <li>Item 1</li>
-                <li>Item 2</li>
-                <li>Item 3</li>
-            </ul>
-        </>
+            <div className="row">
+                <div className="col-7">
+                    <ul className="list-group">
+                        <li className="list-group-item d-flex justify-content-between align-items-center">
+                            <span>Item 1</span>
+                            <button className="btn btn-danger">Borrar</button>
+                        </li>
+                    </ul>
+                </div>
+                <div className="col-5">
+                    <h4>Agregar TODO</h4>
+                    <hr />
+                    <form>
+                        <input type="text" placeholder="Qué hay que hacer?" className="form-control" />
+                    </form>
+                    <button className="btn btn-dark mx-0 mt-3" type="submit">Agregar</button>
+                </div>
+            </div>
+
+        </div>
     )
 }
