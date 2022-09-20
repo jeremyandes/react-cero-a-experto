@@ -1,8 +1,19 @@
+import { Navigate, Route, Routes } from 'react-router-dom'
+import { AboutPage, HomePage, LoginPage } from './pages';
+
 export const MainApp = () => {
     return (
-        <div className="container">
+        <section className="container">
             <h1>MainApp</h1>
             <hr />
-        </div>
+
+            <Routes>
+                <Route path='/' element={<HomePage />} />
+                <Route path='/login' element={<LoginPage />} />
+                <Route path='/about' element={<AboutPage />} />
+
+                <Route path='/*' element={<Navigate to='/' />} />
+            </Routes>
+        </section>
     )
 }
