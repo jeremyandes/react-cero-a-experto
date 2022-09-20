@@ -7,7 +7,6 @@ export const MainApp = () => {
     return (
         <UserProvider>
             <section className="container">
-                <h1>MainApp</h1>
                 <NavBar />
                 <hr />
 
