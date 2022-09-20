@@ -1,11 +1,26 @@
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 export const NavBar = () => {
+    const activeClass = (isActive) => isActive && 'active';
+
     return (
         <>
-            <Link className='me-3' to="/login">Login</Link>
-            <Link className='me-3' to="/">Home</Link>
-            <Link className='me-3' to="/about">About</Link>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div className="container-fluid">
+                    <Link className="navbar-brand" to='/'>Hooks App</Link>
+
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav">
+                            <NavLink to='/about' className={({ isActive }) => `nav-link ${activeClass(isActive)}`}>
+                                About
+                            </NavLink>
+                            <NavLink to='/login' className={({ isActive }) => `nav-link ${activeClass(isActive)}`}>
+                                Login
+                            </NavLink>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </>
     )
 }
