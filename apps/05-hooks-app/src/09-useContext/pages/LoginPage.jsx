@@ -1,7 +1,7 @@
 export const LoginPage = () => {
     return (
         <>
-            <h1>LoginPage</h1>
+            <h5>LoginPage</h5>
             <hr />
         </>
     )
